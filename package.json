@@ -1,0 +1,24 @@
+{
+  "name": "vim-typist",
+  "version": "0.1.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc && cp rplugin-package.json ./rplugin/node/vim-typist/package.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/shelljs": "^0.8.7",
+    "neovim": "^4.8.0",
+    "ts-loader": "^7.0.0",
+    "tsc": "^1.20150623.0",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "@chemzqm/neovim": "^5.2.3"
+  }
+}

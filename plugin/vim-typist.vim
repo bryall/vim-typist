@@ -7,18 +7,6 @@ if exists("g:loaded_vim_typist")
     finish
 endif
 
-let s:plugin_root_dir = fnamemodify(resolve(expand('<sfile>:p')), ':h')
-
-python3 << EOF
-import sys
-from os.path import normpath, join
-import vim
-plugin_root_dir = vim.eval('s:plugin_root_dir')
-python_root_dir = normpath(join(plugin_root_dir, '..', 'python'))
-sys.path.insert(0, python_root_dir)
-import plugin
-EOF
-
 let g:loaded_vim_typist = 1
 
 function! CreateCenteredFloatingWindow() abort
@@ -46,9 +34,10 @@ function! CreateCenteredFloatingWindow() abort
     return l:textbuf
 endfunction
 
-function! VimTypist() abort
+function! VimTypistFW() abort
     let l:buf = CreateCenteredFloatingWindow()
     call nvim_set_current_buf(l:buf)
+    call VimTypistMain()
 endfunction
 
-command! VimTypist call VimTypist()
+command! VimTypist call VimTypistFW()
