@@ -16,7 +16,7 @@
     "tsc": "^1.20150623.0",
     "typescript": "^3.8.3",
     "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.12"
   },
   "dependencies": {
     "@chemzqm/neovim": "^5.2.3"
